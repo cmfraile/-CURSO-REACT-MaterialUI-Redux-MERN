@@ -1,21 +1,13 @@
 import { Google } from '@mui/icons-material';
 import { Link as RrdLink } from 'react-router-dom';
-import { Grid , Typography , TextField , Button , Link } from '@mui/material'
+import { Grid , Typography , TextField , Button , Link } from '@mui/material';
+import { AuthLayout } from '../layout/AuthLayout';
 
 export const LoginPage = () => {
     return(
-        <Grid   container
-                spacing={0}
-                direction='column'
-                alignItems='center'
-                justifyContent='center'
-                sx={{minHeight:'100vh',backgroundColor:'primary.main',pt:4}}
-        >
-
-        <Grid   item
-                sx={{backgroundColor:'white',padding:3,borderRadius:3}}
-        >
-            <Typography variant='h5' sx={{mb:1}}> Login </Typography>
+    <AuthLayout title='Login'>
+    <form>
+        
             <Grid item>
                 <TextField  label='Correo'
                             type='email'
@@ -38,13 +30,8 @@ export const LoginPage = () => {
                 <Link component={ RrdLink } color='inherit' to='/auth/register'>
                     Crear una cuneta
                 </Link>
-
             </Grid>
-
-        </Grid>
-
-        
-
-        </Grid>
+    </form>
+    </AuthLayout>
     )
 }
