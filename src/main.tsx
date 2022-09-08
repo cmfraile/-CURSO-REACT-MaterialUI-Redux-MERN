@@ -1,21 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Routes , Route, BrowserRouter } from 'react-router-dom';
-import { AuthRoutes } from './auth/routes/AuthRoutes';
-import { JournalRoutes } from './journal/routes/JournalRoutes';
-import './main.sass'
+import { AppRouter } from './router/AppRouter';
 
-const Japp = () => {
-  return(
-    <BrowserRouter>
-      <Routes>
-        <Route path='/auth/*' element={<AuthRoutes/>} />
-        <Route path='/*' element={<JournalRoutes/>} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
+import './main.sass';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-<React.StrictMode><Japp></Japp></React.StrictMode>
+<React.StrictMode><AppRouter/></React.StrictMode>
 );
