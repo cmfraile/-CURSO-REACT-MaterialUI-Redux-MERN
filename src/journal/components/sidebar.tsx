@@ -6,7 +6,7 @@ export const SideBar = ({dw}:{dw:string}) => {
         <Box    component='nav'
                 sx={{
                     left:{xs:'0px'},
-                    width:{xs:'20vw'},
+                    minwidth:{xs:'20vw'},
                 }}
         >
             <Drawer     variant='permanent'

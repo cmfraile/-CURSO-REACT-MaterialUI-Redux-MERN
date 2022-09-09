@@ -6,7 +6,7 @@ export const NavBar = ({dw}:{dw:string}) => {
         <AppBar position='fixed'
                 sx={{
                     right:{xs:'0px'},
-                    width:{xs:'100vw',md:'80vw'}
+                    minwidth:{xs:'80vw',}
                 }}
                 >
             <Toolbar>
