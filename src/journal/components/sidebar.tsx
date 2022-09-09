@@ -1,4 +1,5 @@
 import { Box , Drawer , Toolbar , Typography , Divider } from '@mui/material';
+import { ListSidebar } from './listaSidebar';
 
 export const SideBar = ({dw}:{dw:string}) => {
     return(
@@ -21,6 +22,7 @@ export const SideBar = ({dw}:{dw:string}) => {
                     </Typography>
                 </Toolbar>
                 <Divider/>
+                <ListSidebar arr={['lorem','ipsum','dolor']} />
             </Drawer>
         </Box>    
     )
