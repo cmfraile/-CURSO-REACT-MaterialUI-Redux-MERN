@@ -1,12 +1,12 @@
 import { AppBar , IconButton , Toolbar , Grid , Typography } from "@mui/material";
 import { LogoutOutlined, MenuOutlined } from "@mui/icons-material";
 
-export const NavBar = ({dw}:{dw:string}) => {
+export const NavBar = ({dw}:{dw:number}) => {
     return(
         <AppBar position='fixed'
-                sx={{
-                    right:{xs:'0px'},
-                    minwidth:{xs:'80vw',}
+                sx={{ 
+                    width: { sm: `calc(100% - ${ dw }px)` },
+                    ml: { sm: `${ dw }px` }
                 }}
                 >
             <Toolbar>

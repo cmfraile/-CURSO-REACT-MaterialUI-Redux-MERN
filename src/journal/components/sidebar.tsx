@@ -1,19 +1,16 @@
 import { Box , Drawer , Toolbar , Typography , Divider } from '@mui/material';
-import { ListSidebar } from './listaSidebar';
+import { ListSidebar } from './listSidebar';
 
-export const SideBar = ({dw}:{dw:string}) => {
+export const SideBar = ({dw}:{dw:number}) => {
     return(
         <Box    component='nav'
-                sx={{
-                    left:{xs:'0px'},
-                    minwidth:{xs:'20vw'},
-                }}
+                sx={{ width: { sm: dw }, flexShrink: { sm: 0 } }}
         >
             <Drawer     variant='permanent'
-                        open={true}
+                        open
                         sx={{
                             display:{xs:'block'},
-                            '&. MuiDrawer-paper':{boxSizing:'border-box',width:'20vw'},}}
+                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: dw }}}
             >
                 
                 <Toolbar>
